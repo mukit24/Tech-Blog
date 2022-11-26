@@ -12,8 +12,12 @@ const Header = () => {
           <li>
             <Link to="/posts">Posts</Link>
           </li>
+          <li>
+            <Link to="/registration">Registration</Link>
+          </li>
         </ul>
       </nav>
+      <hr />
       <Outlet />
     </>
     
