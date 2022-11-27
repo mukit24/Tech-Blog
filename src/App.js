@@ -8,6 +8,7 @@ import Posts from './components/Posts';
 import axiosInstance from './axios';
 import Registration from './components/Registration';
 import Login from './components/Login';
+import Logout from './components/Logout';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       axiosInstance.get().then((response)=>{
         setposts(response.data);
       })
-  },[])
+  },[setposts])
 
   return (
     <div className="App">
@@ -28,6 +29,7 @@ function App() {
           <Route path='posts' element={<Posts posts={posts}/>} />
           <Route path='registration' element={<Registration/>} />
           <Route path='login' element={<Login />} />
+          <Route path='logout' element={<Logout />} />
         </Route>
       </Routes>
       <Footer />
